@@ -6,7 +6,7 @@ from totus import Totus
 t = Totus()
 reference = t.Reference()
 
-print("Public IP:")
+print("Your Public IP:")
 print(json.dumps(reference.IP(), indent=4))
 
 print("Google's 8.8.8.8:")
