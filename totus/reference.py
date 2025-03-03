@@ -1,3 +1,4 @@
+import json
 import math
 
 from totus.dto.POI import POI
@@ -34,3 +35,11 @@ class Reference():
 
         response = self._totus._make_request('GET', '/ref/geo/poi', params)
         return [POI(item) for item in response]
+
+    def IP(self, ip4=None, ip6=None):
+        params: dict[str, any] = {}
+        if ip4:
+            params['ip4'] = ip4
+        elif ip6:
+            params['ip6'] = ip6
+        return self._totus._make_request('GET', '/ref/ip', params)
