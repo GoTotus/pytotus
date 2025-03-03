@@ -1,3 +1,4 @@
+import json
 from typing import Dict, Any
 
 
@@ -31,4 +32,9 @@ class POI():
 
     def __repr__(self) -> str:
         """String representation of the object."""
-        return f"POI(id={self.id()}, gh={self.geohash()}, lat={self.latitude()}, lon={self.longitude()}, distance={self.distance()})"
+        return json.dumps({'id': self.id(),
+                           'lat': self.latitude(),
+                           'lon': self.longitude(),
+                           'gh': self.geohash(),
+                           'dist': self.distance(),
+                           'info': self.info()}, indent=4)
