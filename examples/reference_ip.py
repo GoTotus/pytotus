@@ -6,11 +6,11 @@ from totus import Totus
 t = Totus()
 reference = t.Reference()
 
-print("Your Public IP:")
+print("Your Public IP ...")
 print(json.dumps(reference.IP(), indent=4))
 
-print("Google's 8.8.8.8:")
-print(json.dumps(reference.IP(ip4='8.8.8.8'), indent=4))
+print("Cloudflare 1.1.1.1 ...")
+print(json.dumps(reference.IP(ip4='1.1.1.1'), indent=4))
 
-print("Google's ip6 for previous 8.8.8.8: 2001:4860:4860::8888 ...")
-print(json.dumps(reference.IP(ip6='2001:4860:4860::8888'), indent=4))
+print("Cloudflare ip6 for previous 1.1.1.1: 2606:4700:4700::1111 ...")
+print(json.dumps(reference.IP(ip6='2606:4700:4700::1111'), indent=4))
