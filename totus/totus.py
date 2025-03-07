@@ -5,6 +5,7 @@ import requests
 
 from .errors import AuthenticationError, ClientError, TotusClientError, ServerError, NotFoundError
 from .reference import Reference
+from .validate import Validate
 
 
 class Totus():
@@ -57,3 +58,6 @@ class Totus():
 
     def Reference(self) -> Reference:
         return Reference(self)
+
+    def Validate(self) -> Validate:
+        return Validate(self)
