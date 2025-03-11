@@ -20,6 +20,7 @@ test:
 
 .PHONY: build
 build: test
+	rm -f dist/*
 	. venv/bin/activate && python3 -m build
 
 .PHONY: release-test

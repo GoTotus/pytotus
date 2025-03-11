@@ -63,11 +63,6 @@ For detailed manuals about Totus please check: [docs.gototus.com](https://docs.g
 
 `pip install totus`
 
-If you
-At the moment you will need to checkout this repository and do:
-
-Soon: `pip install totus`
-
 ## Building
 
 ```
@@ -78,4 +73,4 @@ make clean
 
 Local Test: `pip install -e <src_folder>`.
 
-for building, you will need to have a functioning Totus API key.
+for building, you will need to have a functioning Totus API key in the envvar `TOTUS_KEY`.
