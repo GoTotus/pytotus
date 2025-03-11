@@ -6,6 +6,9 @@ class POI():
     def __init__(self, _data: Dict[str, Any]):
         self._data = _data
 
+    def data(self) -> Dict[str, Any]:
+        return self._data
+
     def id(self) -> int:
         """Return the POI's ID."""
         return self._data.get("id", 0)

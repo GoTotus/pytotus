@@ -63,6 +63,8 @@ For detailed manuals about Totus please check: [docs.gototus.com](https://docs.g
 
 `pip install totus`
 
+[PyPi.org project page](https://pypi.org/project/totus/)
+
 ## Building
 
 ```
