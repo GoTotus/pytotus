@@ -1,7 +1,5 @@
 # GoTotus.com APIs' Python bindings
 
-_Status:_ beta, to be released.
-
 ## Basic Usage
 
 `TOTUS_KEY` environment variable will be used to pick the api
@@ -54,17 +52,19 @@ it will print:
 
 ## Examples
 
-For further examples, check the [examples](examples/) folder in this project.
-Or direct link to the [GitHub Website](https://github.com/GoTotus/pytotus/tree/main/examples).
+For further examples, check the `examples/` folder in this project.
+Or a public copy at the [GitHub Website](https://github.com/GoTotus/pytotus/tree/main/examples).
 
 ## Manuals
 
-For detailed manuals please check: [docs.gototus.com](https://docs.gototus.com)
+For detailed manuals about Totus please check: [docs.gototus.com](https://docs.gototus.com)
 
 ## Installing
 
+`pip install totus`
+
+If you
 At the moment you will need to checkout this repository and do:
-`pip install -e <path-to-checkout>`.
 
 Soon: `pip install totus`
 
@@ -75,5 +75,7 @@ make setup build
 [...]
 make clean
 ```
+
+Local Test: `pip install -e <src_folder>`.
 
 for building, you will need to have a functioning Totus API key.

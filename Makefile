@@ -22,6 +22,15 @@ test:
 build: test
 	. venv/bin/activate && python3 -m build
 
+.PHONY: release-test
+release-test: build
+	python -m twine upload --repository testpypi dist/*
+
+.PHONY: release
+release: build
+	python -m twine upload dist/*
+
+
 .PHONY: clean
 clean:
 	rm -rf venv/

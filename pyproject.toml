@@ -6,8 +6,12 @@ build-backend = "hatchling.build"
 name = "totus"
 version = "0.1.0"
 authors = [{ name = "GoTotus Team", email = "support@gototus.com" }]
-description = "GoTotus Python library"
+description = "Client API for GoTotus; your universal development toolkit"
 readme = "README.md"
 requires-python = ">=3.6"
 dependencies = ["requests>=2.28.0"]
 license = "BSD-3-Clause"
+
+[project.urls]
+"Homepage" = "https://github.com/GoTotus/pytotus"
+"Documentation" = "https://docs.gototus.com/"
