@@ -8,6 +8,7 @@ class CheckLevel(Enum):
     L2_DNS = "l2_dns"
     L3_Server = "l3_server"
     L4_Dbs = "l4_dbs"
+    L5_Smell = "l5_smell"
 
     @classmethod
     def from_string(cls, value: str) -> 'CheckLevel':
