@@ -25,11 +25,11 @@ build: test
 
 .PHONY: release-test
 release-test: build
-	python -m twine upload --repository testpypi dist/*
+	. venv/bin/activate && python3 -m twine upload --repository testpypi dist/*
 
 .PHONY: release
 release: build
-	python -m twine upload dist/*
+	. venv/bin/activate && python3 -m twine upload dist/*
 
 
 .PHONY: clean
