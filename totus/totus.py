@@ -3,8 +3,11 @@ from typing import Optional, Dict, Any
 
 import requests
 
+from .dto.Authenticated import Authenticated
+from .dto.Balance import Balance
 from .errors import AuthenticationError, ClientError, TotusClientError, ServerError, NotFoundError
 from .reference import Reference
+from .utility import Utility
 from .validate import Validate
 
 
@@ -61,3 +64,21 @@ class Totus():
 
     def Validate(self) -> Validate:
         return Validate(self)
+
+    def Utility(self) -> Utility:
+        return Utility(self)
+
+    def balance(self) -> Balance:
+        """Retrieve current account credit balance."""
+        response = self._make_request('GET', '/balance')
+        return Balance(response)
+
+    def Balance(self) -> Balance:
+        return self.balance()
+
+    def authenticated(self) -> Authenticated:
+        """Check whether the API key is valid and working."""
+        return self.Utility().authenticated()
+
+    def Authenticated(self) -> Authenticated:
+        return self.authenticated()

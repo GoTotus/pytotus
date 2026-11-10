@@ -14,6 +14,13 @@ t = Totus(api_key="<your-api-key>")
 reference = t.Reference()  # the Reference set of APIs
 
 print(reference.GeoPOI(gh='69y7pkxfc', distance=1000, what='shop', limit=2))
+
+# Check authentication status (free of charge)
+auth = t.authenticated()
+print(f"Authenticated: {auth.authenticated()} ({auth.token_sm()})")
+
+# Check account credit balance (free of charge)
+print(f"Balance: {t.balance().credits():.2f} Credits")
 ```
 
 it will print:
